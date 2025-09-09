@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combinators Example</title>
+  <style>
+    /* 1. Descendant (any <a> inside nav) */
+    nav a {
+      color: blue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 2. Child (only direct <li> of <ul>) */
+    ul > li {
+      color: green;
+    }
+
+    /* 3. Adjacent sibling (first <p> after an <h2>) */
+    h2 + p {
+      background: yellow;
+      padding: 5px;
+    }
+
+    /* 4. General sibling (all <p> after an <h2>) */
+    h2 ~ p {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Descendant -->
+  <nav>
+    <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a>
+  </nav>
+
+  <!-- Child -->
+  <ul>
+    <li>Direct Child 1</li>
+    <li>Direct Child 2</li>
+    <li>
+      Nested List
+      <ul>
+        <li>Nested Child (won’t be green)</li>
+        <ul>
+        <li>Nested Child (won’t be green)</li>
+      </ul>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Adjacent & General sibling -->
+  <h2>Section Title</h2>
+  <p>This is the FIRST paragraph after h2 (adjacent sibling → yellow background).</p>
+  <p>This is ANOTHER paragraph after h2 (general sibling → purple text).</p>
+  <p>Yet another paragraph (also general sibling → purple text).</p>
+
+</body>
+</html>
