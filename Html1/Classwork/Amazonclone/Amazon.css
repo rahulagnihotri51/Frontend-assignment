@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    font-family: Arial;
+    border: border-box;
+    color:white;
+}
+.navbar{
+    height:60px;
+    background-color: #0f1111;
+}
+li{
+    list-style-type:none;
+}
